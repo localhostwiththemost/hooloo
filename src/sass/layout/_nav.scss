@@ -1,0 +1,151 @@
+header {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  color: white;
+  padding: 20px;
+  backdrop-filter: saturate(180%) blur(2rem);
+  background: rgba(0, 0, 0, 0.8);
+  background-color: #16181d;
+}
+
+.title-container {
+  /*hooloo heading*/
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: $color-hulu-green;
+  cursor: pointer;
+}
+
+.title-container > a {
+  text-decoration: none;
+}
+
+.title-container > a:visited {
+  color: $color-hulu-green;
+}
+
+.title-container > a > h1 {
+  font-weight: 700;
+  font-size: 26px;
+  font-style: italic;
+}
+
+.logo-img__container {
+  width: 45px;
+  height: 45px;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+}
+
+.link-container {
+  /*home/featured/genres/starred*/
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  font-weight: 600;
+  //font-size: 20px;
+  padding-left: 40px;
+}
+
+ul > li {
+  display: inline;
+  margin-right: 40px;
+}
+
+li > a {
+  transition: border-bottom 100ms;
+  transition-timing-function: ease-in-out;
+  text-decoration: none;
+  font-size: 2.2rem;
+  white-space: nowrap;
+}
+
+li > a:hover {
+  border-bottom: 3px solid $color-hulu-green;
+  cursor: pointer;
+}
+
+li > a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+// When a nav link is clicked
+.active {
+  border-bottom: 3px solid $color-hulu-green;
+}
+
+.active-account {
+  color: $color-hulu-green;
+}
+
+a.active-account:visited {
+  color: $color-hulu-green;
+}
+
+.icon-container {
+  /*search & account icons*/
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+ion-icon {
+  font-size: 2.4rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-hulu-green;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  background: #1f2123;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  outline: none;
+  color: $color-hulu-green;
+  background: #1f2123;
+  font-family: "Inter", sans-serif;
+
+  @media only screen and (max-width: 950px) {
+    width: 18rem;
+  }
+}
+
+.search ion-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #fff;
+}

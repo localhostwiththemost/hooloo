@@ -1,0 +1,60 @@
+.account-section {
+  background-color: #1e2126;
+  height: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.account-section > a > ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.account-section > a > ion-icon:hover {
+  color: $color-hulu-green;
+}
+
+.account-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-heading {
+  color: #fff;
+  font-size: 3.2rem;
+}
+
+.account-form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > label {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  & > input {
+    border-radius: 3rem;
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+// Every label except for the first will have a margin-top
+.account-form label:not(:first-child) {
+  margin-top: 10px;
+}

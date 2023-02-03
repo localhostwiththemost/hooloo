@@ -1,0 +1,22 @@
+.login-container {
+  //z-index: 10000;
+  background-color: #1e2126;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & label {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.hide {
+  display: none;
+}

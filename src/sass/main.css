@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; /*62.5% of 16px = 10px (We use a % to be more user friendly, 16px is default)
+*/
+  /*Global font-size (Each rem unit is now 10px)*/
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.login-container {
+  background-color: #1e2126;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-form label {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.movie div:nth-of-type(1) {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: #1ce783;
+}
+
+.movie:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.movie div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+
+.movie div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie div:nth-of-type(3) {
+  z-index: 2;
+  background-color: #343739;
+  padding: 16px 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.movie div:nth-of-type(3) span {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.movie div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  color: #1ce783;
+}
+
+.movie:hover div:nth-of-type(2) {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.movie:hover div:nth-of-type(3) {
+  background-color: transparent;
+}
+
+.movie:hover div:nth-of-type(1) {
+  opacity: 1;
+}
+
+.poster {
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.account-section {
+  background-color: #1e2126;
+  height: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.account-section > a > ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.account-section > a > ion-icon:hover {
+  color: #1ce783;
+}
+
+.account-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-heading {
+  color: #fff;
+  font-size: 3.2rem;
+}
+
+.account-form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.account-form > label {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.account-form > input {
+  border-radius: 3rem;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.account-form label:not(:first-child) {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #292c33;
+  height: 65px;
+}
+
+.genre-link__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  padding: 75px;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  color: white;
+  padding: 20px;
+  backdrop-filter: saturate(180%) blur(2rem);
+  background: rgba(0, 0, 0, 0.8);
+  background-color: #16181d;
+}
+
+.title-container {
+  /*hooloo heading*/
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: #1ce783;
+  cursor: pointer;
+}
+
+.title-container > a {
+  text-decoration: none;
+}
+
+.title-container > a:visited {
+  color: #1ce783;
+}
+
+.title-container > a > h1 {
+  font-weight: 700;
+  font-size: 26px;
+  font-style: italic;
+}
+
+.logo-img__container {
+  width: 45px;
+  height: 45px;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+}
+
+.link-container {
+  /*home/featured/genres/starred*/
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  font-weight: 600;
+  padding-left: 40px;
+}
+
+ul > li {
+  display: inline;
+  margin-right: 40px;
+}
+
+li > a {
+  transition: border-bottom 100ms;
+  transition-timing-function: ease-in-out;
+  text-decoration: none;
+  font-size: 2.2rem;
+  white-space: nowrap;
+}
+
+li > a:hover {
+  border-bottom: 3px solid #1ce783;
+  cursor: pointer;
+}
+
+li > a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 3px solid #1ce783;
+}
+
+.active-account {
+  color: #1ce783;
+}
+
+a.active-account:visited {
+  color: #1ce783;
+}
+
+.icon-container {
+  /*search & account icons*/
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+ion-icon {
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+ion-icon:hover {
+  color: #1ce783;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  background: #1f2123;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  outline: none;
+  color: #1ce783;
+  background: #1f2123;
+  font-family: "Inter", sans-serif;
+}
+@media only screen and (max-width: 950px) {
+  .search input {
+    width: 18rem;
+  }
+}
+
+.search ion-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.results-section {
+  background-color: #1e2126;
+  height: 100%;
+}
+
+.empty {
+  background-color: #1e2126;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty h2 {
+  font-size: 2rem;
+  color: #1ce783;
+}
+
+.starred-section {
+  background-color: #1e2126;
+  height: 100%;
+  animation: body-load 500ms ease-out;
+}
+
+.starred-section__full {
+  background-color: #1e2126;
+  height: 100%;
+  animation: body-load 500ms ease-out;
+}
+
+/*# sourceMappingURL=main.css.map */
