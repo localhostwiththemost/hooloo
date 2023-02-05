@@ -34,9 +34,39 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.login-btn {
+  padding: 1rem 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.login-btn:hover {
+  background-color: #1ce783;
+}
+
 .login-container {
   background-color: #1e2126;
   height: 100vh;
+}
+
+.login-title__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.login-title {
+  color: #1ce783;
+  font-weight: 700;
+  font-size: 4.5rem;
+  font-style: italic;
 }
 
 .login-form {
@@ -44,6 +74,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.login-form input {
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  font-family: "Inter", sans-serif;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  outline: none;
+}
+.login-form input:first-of-type {
+  margin-bottom: 20px;
+}
+.login-form input:last-of-type {
+  margin-bottom: 20px;
 }
 .login-form label {
   color: #fff;
@@ -202,6 +247,20 @@ body {
 
 .account-form label:not(:first-child) {
   margin-top: 10px;
+}
+
+.error-container {
+  background-color: #1e2126;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: #fff;
+  font-size: 3rem;
 }
 
 footer {

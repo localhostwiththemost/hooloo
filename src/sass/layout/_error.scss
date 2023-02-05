@@ -1,0 +1,13 @@
+.error-container {
+  background-color: #1e2126;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: #fff;
+  font-size: 3rem;
+}

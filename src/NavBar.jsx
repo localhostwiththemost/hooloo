@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function NavBar(props) {
   const [activeTab, setActiveTab] = useState("home");
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const searchMovies = async (title) => {
     navigate("/");
@@ -25,7 +26,7 @@ function NavBar(props) {
             <li>
               <Link
                 to="/"
-                className={activeTab === "home" ? "active" : ""}
+                className={location.pathname === "/" ? "active" : ""}
                 onClick={() => setActiveTab("home")}
               >
                 Home
@@ -34,7 +35,7 @@ function NavBar(props) {
             <li>
               <Link
                 to="/featured"
-                className={activeTab === "featured" ? "active" : ""}
+                className={location.pathname === "/featured" ? "active" : ""}
                 onClick={() => setActiveTab("featured")}
               >
                 Featured
@@ -43,7 +44,7 @@ function NavBar(props) {
             <li>
               <Link
                 to="/genres"
-                className={activeTab === "genres" ? "active" : ""}
+                className={location.pathname === "/genres" ? "active" : ""}
                 onClick={() => setActiveTab("genres")}
               >
                 Genres
@@ -52,7 +53,7 @@ function NavBar(props) {
             <li>
               <Link
                 to="/starred"
-                className={activeTab === "starred" ? "active" : ""}
+                className={location.pathname === "/starred" ? "active" : ""}
                 onClick={() => setActiveTab("starred")}
               >
                 My Starred
@@ -82,7 +83,7 @@ function NavBar(props) {
           </div>
           <Link
             to="/account"
-            className={activeTab === "account" ? "active-account" : ""}
+            className={location.pathname === "/account" ? "active-account" : ""}
             onClick={() => setActiveTab("account")}
           >
             <ion-icon name="person-circle"></ion-icon>

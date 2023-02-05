@@ -2,10 +2,12 @@
 
 @import "base/base";
 
+@import "components/button";
 @import "components/login";
 @import "components/moviecard";
 
 @import "layout/account";
+@import "layout/error";
 @import "layout/footer";
 @import "layout/genres";
 @import "layout/nav";

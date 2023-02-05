@@ -11,7 +11,6 @@ function Login(props) {
 
   useEffect(() => {
     if (isLoggedIn && location.pathname === "/login") {
-      //history.push("/");
       navigate("/");
     }
   }, [isLoggedIn, location]);
@@ -23,8 +22,10 @@ function Login(props) {
 
     if (username !== "" && password !== "") {
       if (username === lsUsername && password === lsPassword) {
+        localStorage.setItem("isLoggedIn", true);
         setIsLoggedIn(true);
-        //navigate("/");
+        // Pass the updated isLoggedIn value to the parent component(App) using props
+        props.updateIsLoggedIn(true);
       } else {
         alert("Incorrect username or password");
       }
@@ -36,6 +37,9 @@ function Login(props) {
   return (
     <>
       <div className="login-container">
+        <div className="login-title__container">
+          <h1 className="login-title">hooloo</h1>
+        </div>
         <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="username">Username</label>
           <input
@@ -49,7 +53,9 @@ function Login(props) {
             name="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Log in</button>
+          <button type="submit" className="login-btn">
+            Log in
+          </button>
         </form>
       </div>
     </>

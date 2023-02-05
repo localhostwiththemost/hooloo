@@ -1,0 +1,13 @@
+.login-btn {
+  padding: 1rem 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.login-btn:hover {
+  background-color: $color-hulu-green;
+}

@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
+//import { redirect } from "react-router-dom";
 import MovieCard from "./MovieCard";
 import Loader from "./Loader";
 
 const API_URL = "https://www.omdbapi.com?apikey=9a98a936";
 
 function Featured() {
+  // const { isLoggedIn } = useContext(AuthContext);
+
+  // if (!isLoggedIn) {
+  //   return <Redirect to="/login" />;
+  // }
+
   const [featured, setFeatured] = useState([]);
   const [loading, setLoading] = useState(true);
 

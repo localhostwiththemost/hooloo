@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Account() {
+function Account(props) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("admin");
   const [password, setPassword] = useState("admin");
@@ -61,7 +61,14 @@ function Account() {
     <>
       <section className="account-section">
         <Link to="/login">
-          <ion-icon name="log-out-outline" className="logout-icon"></ion-icon>
+          <ion-icon
+            name="log-out-outline"
+            className="logout-icon"
+            onClick={() => {
+              localStorage.setItem("isLoggedIn", false);
+              props.updateIsLoggedIn(false);
+            }}
+          ></ion-icon>
         </Link>
         <div className="account-container">
           <h1 className="account-heading">Manage Your Account</h1>
