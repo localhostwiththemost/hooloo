@@ -54,9 +54,18 @@ body {
 }
 
 .login-title__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 80px;
   padding-bottom: 100px;
@@ -70,9 +79,18 @@ body {
 }
 
 .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .login-form input {
@@ -102,9 +120,16 @@ body {
 
 .container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -116,7 +141,10 @@ body {
   border-radius: 12px;
   overflow: hidden;
   border: none;
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  -webkit-box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -131,7 +159,10 @@ body {
 }
 
 .movie:hover {
+  -webkit-box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
 }
 
@@ -219,9 +250,18 @@ body {
 
 .account-container {
   padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -232,9 +272,18 @@ body {
 
 .account-form {
   margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .account-form > label {
@@ -259,9 +308,18 @@ body {
 .error-container {
   background-color: #1e2126;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -276,9 +334,18 @@ footer {
 }
 
 .genre-link__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
   color: #fff;
@@ -288,18 +355,26 @@ footer {
 header {
   margin: 0;
   padding: 0;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 65px;
   color: white;
   padding: 20px;
+  -webkit-backdrop-filter: saturate(180%) blur(2rem);
   backdrop-filter: saturate(180%) blur(2rem);
   background: rgba(0, 0, 0, 0.8);
   background-color: #16181d;
@@ -307,7 +382,11 @@ nav {
 
 .title-container {
   /*hooloo heading*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-left: 10px;
   color: #1ce783;
@@ -355,7 +434,11 @@ nav {
 
 .link-container {
   /*home/featured/genres/starred*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -381,7 +464,11 @@ ul > li {
 }
 
 li > a {
+  -webkit-transition: border-bottom 100ms;
+  -o-transition: border-bottom 100ms;
   transition: border-bottom 100ms;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
   text-decoration: none;
   font-size: 2.2rem;
@@ -406,6 +493,8 @@ select {
   font-weight: 600;
   padding: 10px;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 @media only screen and (max-width: 750px) {
@@ -448,7 +537,11 @@ a.active-account:visited {
 
 .icon-container {
   /*search & account icons*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-right: 10px;
 }
@@ -462,8 +555,14 @@ ion-icon:hover {
 }
 
 .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem 1rem;
   border-radius: 3rem;
@@ -471,6 +570,8 @@ ion-icon:hover {
 }
 
 .search input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   border: none;
   font-size: 1.5rem;
@@ -544,13 +645,11 @@ a:visited {
 .starred-section {
   background-color: #1e2126;
   height: 100%;
-  animation: body-load 500ms ease-out;
 }
 
 .starred-section__full {
   background-color: #1e2126;
   height: 100%;
-  animation: body-load 500ms ease-out;
 }
 
 /*# sourceMappingURL=main.css.map */
