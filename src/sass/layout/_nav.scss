@@ -25,6 +25,10 @@ nav {
   padding-left: 10px;
   color: $color-hulu-green;
   cursor: pointer;
+
+  @media only screen and (max-width: 350px) {
+    padding-left: 0;
+  }
 }
 
 .title-container > a {
@@ -39,6 +43,14 @@ nav {
   font-weight: 700;
   font-size: 26px;
   font-style: italic;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 3.5rem;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 3rem;
+  }
 }
 
 .logo-img__container {
@@ -62,11 +74,19 @@ ul {
   font-weight: 600;
   //font-size: 20px;
   padding-left: 40px;
+
+  @media only screen and (max-width: 750px) {
+    display: none;
+  }
 }
 
 ul > li {
   display: inline;
   margin-right: 40px;
+
+  @media only screen and (max-width: 900px) {
+    margin-right: 25px;
+  }
 }
 
 li > a {
@@ -85,6 +105,39 @@ li > a:hover {
 li > a:visited {
   color: #fff;
   text-decoration: none;
+}
+
+select {
+  display: none;
+  font-size: 2.2rem;
+  background-color: #16181d;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  //border: none;
+  outline: none;
+  appearance: none;
+
+  @media only screen and (max-width: 750px) {
+    display: inline-block;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 5px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    margin-left: 15px;
+  }
 }
 
 // When a nav link is clicked
@@ -138,12 +191,34 @@ ion-icon {
   @media only screen and (max-width: 950px) {
     width: 18rem;
   }
+
+  @media only screen and (max-width: 900px) {
+    width: 15rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 10rem;
+  }
+
+  @media only screen and (max-width: 350px) {
+    width: 8rem;
+  }
 }
 
 .search ion-icon {
   width: 24px;
   height: 24px;
   cursor: pointer;
+
+  @media only screen and (max-width: 450px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 a:visited {

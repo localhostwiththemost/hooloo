@@ -2,15 +2,25 @@ import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function NavBar(props) {
+  const location = useLocation();
+
   const [activeTab, setActiveTab] = useState("home");
+  const [selectedOption, setSelectedOption] = useState(
+    localStorage.getItem("selectedPath") || "/"
+  );
 
   const navigate = useNavigate();
-  const location = useLocation();
 
   const searchMovies = async (title) => {
     navigate("/");
     props.searchMovies(title);
     setActiveTab("home");
+  };
+
+  const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value);
+    navigate(`/${event.target.value}`);
+    localStorage.setItem("selectedPath", event.target.value);
   };
 
   return (
@@ -60,6 +70,13 @@ function NavBar(props) {
               </Link>
             </li>
           </ul>
+          <select value={selectedOption} onChange={handleSelectChange}>
+            <option value="">Home</option>
+            <option value="featured">Featured</option>
+            <option value="genres">Genres</option>
+            <option value="starred">Starred</option>
+            <option value="account">Account</option>
+          </select>
           <div className="icon-container">
             <div className="search">
               <form
@@ -84,7 +101,11 @@ function NavBar(props) {
           <Link
             to="/account"
             className={location.pathname === "/account" ? "active-account" : ""}
-            onClick={() => setActiveTab("account")}
+            onClick={() => {
+              setActiveTab("account");
+              setSelectedOption("account");
+              localStorage.setItem("selectedPath", "account");
+            }}
           >
             <ion-icon name="person-circle"></ion-icon>
           </Link>
