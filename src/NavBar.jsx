@@ -28,7 +28,14 @@ function NavBar(props) {
       <header className={props.className}>
         <nav>
           <div className="title-container">
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                setActiveTab("home");
+                setSelectedOption("");
+                localStorage.setItem("selectedPath", "/");
+              }}
+            >
               <h1>hooloo</h1>
             </Link>
           </div>
