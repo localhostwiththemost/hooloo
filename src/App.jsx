@@ -35,6 +35,11 @@ function App() {
     navigate("/");
   };
 
+  // Redirects user to login page when the app is first opened
+  useEffect(() => {
+    navigate("/login");
+  }, []);
+
   useEffect(() => {
     const isLoggedInLS = localStorage.getItem("isLoggedIn");
     if (!isLoggedInLS) {
