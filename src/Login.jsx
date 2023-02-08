@@ -9,6 +9,13 @@ function Login(props) {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Sets the initial value of isLoggedin in ls to false
+  useEffect(() => {
+    if (!localStorage.getItem("isLoggedIn")) {
+      localStorage.setItem("isLoggedIn", false);
+    }
+  }, []);
+
   useEffect(() => {
     if (isLoggedIn && location.pathname === "/login") {
       navigate("/");
