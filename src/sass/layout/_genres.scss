@@ -16,3 +16,43 @@
   color: #fff;
   padding: 75px;
 }
+
+// Back icon(Genres section)
+.genres-section {
+  background-color: #1e2126;
+  height: 100%;
+  position: relative;
+}
+
+.genres-section > ion-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 2.8rem;
+}
+
+.genres-section > ion-icon:hover {
+  color: $color-hulu-green;
+}
+
+.genres-section__empty {
+  background-color: #1e2126;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.genres-section__empty > ion-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 2.8rem;
+}
+
+.genres-section__empty > ion-icon:hover {
+  color: $color-hulu-green;
+}
