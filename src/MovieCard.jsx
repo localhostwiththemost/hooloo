@@ -6,8 +6,8 @@ function MovieCard({ movie: { imdbID, Year, Poster, Title, Type } }) {
   );
   const [starImg, setStarImg] = useState(
     starred.find((f) => f.imdbID === imdbID)
-      ? "src/images/star-filled.png"
-      : "src/images/star-empty.png"
+      ? "/images/star-filled.png"
+      : "/images/star-empty.png"
   );
 
   useEffect(() => {
@@ -20,14 +20,14 @@ function MovieCard({ movie: { imdbID, Year, Poster, Title, Type } }) {
     setStarImg((prevStarURL) => {
       let newStarURL;
       let newStarred = JSON.parse(localStorage.getItem("starred")) || [];
-      if (prevStarURL === "src/images/star-empty.png") {
-        newStarURL = "src/images/star-filled.png";
+      if (prevStarURL === "/images/star-empty.png") {
+        newStarURL = "/images/star-filled.png";
 
         if (!newStarred.find((movie) => movie.imdbID === imdbID)) {
           newStarred.push({ imdbID, Year, Poster, Title, Type });
         }
       } else {
-        newStarURL = "src/images/star-empty.png";
+        newStarURL = "/images/star-empty.png";
         newStarred = newStarred.filter((movie) => movie.imdbID !== imdbID);
       }
       setStarred(newStarred);
