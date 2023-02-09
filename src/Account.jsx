@@ -6,21 +6,6 @@ function Account(props) {
   const [username, setUsername] = useState("admin");
   const [password, setPassword] = useState("admin");
 
-  // Initially set username and password in localStorage
-  useEffect(() => {
-    const lsUsername = localStorage.getItem("username");
-    if (!lsUsername) {
-      localStorage.setItem("username", username);
-    }
-  }, []);
-
-  useEffect(() => {
-    const lsPassword = localStorage.getItem("password");
-    if (!lsPassword) {
-      localStorage.setItem("password", password);
-    }
-  }, []);
-
   const handleNameChange = (event) => {
     setName(event.target.value);
     localStorage.setItem("name", event.target.value);

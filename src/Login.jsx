@@ -9,6 +9,21 @@ function Login(props) {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Initially set username and password in localStorage
+  useEffect(() => {
+    const lsUsername = localStorage.getItem("username");
+    if (!lsUsername) {
+      localStorage.setItem("username", "admin");
+    }
+  }, []);
+
+  useEffect(() => {
+    const lsPassword = localStorage.getItem("password");
+    if (!lsPassword) {
+      localStorage.setItem("password", "admin");
+    }
+  }, []);
+
   // Sets the initial value of isLoggedin in ls to false
   useEffect(() => {
     if (!localStorage.getItem("isLoggedIn")) {
