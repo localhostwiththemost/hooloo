@@ -114,7 +114,11 @@ function NavBar(props) {
           </div>
           <Link
             to="/account"
-            className={location.pathname === "/account" ? "active-account" : ""}
+            className={
+              location.pathname === "/account"
+                ? "active-account"
+                : "default-account"
+            }
             onClick={() => {
               setActiveTab("account");
               setSelectedOption("account");

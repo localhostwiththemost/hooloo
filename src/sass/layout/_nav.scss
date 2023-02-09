@@ -115,11 +115,20 @@ li > a {
   text-decoration: none;
   font-size: 2.2rem;
   white-space: nowrap;
+  color: #fff;
 }
 
 li > a:hover {
   border-bottom: 3px solid $color-hulu-green;
   cursor: pointer;
+}
+
+li > a:active {
+  color: #fff;
+}
+
+li > a:focus {
+  color: #fff;
 }
 
 li > a:visited {
@@ -173,6 +182,10 @@ select {
 
 a.active-account:visited {
   color: $color-hulu-green;
+}
+
+.default-account {
+  color: #fff;
 }
 
 .icon-container {

@@ -514,11 +514,20 @@ li > a {
   text-decoration: none;
   font-size: 2.2rem;
   white-space: nowrap;
+  color: #fff;
 }
 
 li > a:hover {
   border-bottom: 3px solid #1ce783;
   cursor: pointer;
+}
+
+li > a:active {
+  color: #fff;
+}
+
+li > a:focus {
+  color: #fff;
 }
 
 li > a:visited {
@@ -574,6 +583,10 @@ select {
 
 a.active-account:visited {
   color: #1ce783;
+}
+
+.default-account {
+  color: #fff;
 }
 
 .icon-container {
