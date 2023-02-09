@@ -193,6 +193,18 @@ ion-icon {
   &:hover {
     color: $color-hulu-green;
   }
+
+  &:active {
+    color: $color-hulu-green;
+  }
+
+  &:focus {
+    color: #fff;
+  }
+
+  &:visited {
+    color: #fff;
+  }
 }
 
 .search {

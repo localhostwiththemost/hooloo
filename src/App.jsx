@@ -91,6 +91,7 @@ function App() {
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
             className={className}
+            isLoggedIn={isLoggedIn}
           />
         </>
       ) : null}

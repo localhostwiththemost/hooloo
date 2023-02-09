@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function NavBar(props) {
@@ -16,6 +16,13 @@ function NavBar(props) {
     props.searchMovies(title);
     setActiveTab("home");
   };
+
+  // Reset select to "Home" when user logs in
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      setSelectedOption("");
+    }
+  }, [props.isLoggedIn]);
 
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);

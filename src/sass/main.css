@@ -594,6 +594,15 @@ ion-icon {
 ion-icon:hover {
   color: #1ce783;
 }
+ion-icon:active {
+  color: #1ce783;
+}
+ion-icon:focus {
+  color: #fff;
+}
+ion-icon:visited {
+  color: #fff;
+}
 
 .search {
   display: -webkit-box;

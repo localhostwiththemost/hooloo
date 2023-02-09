@@ -5,6 +5,7 @@ function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("");
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -48,6 +49,8 @@ function Login(props) {
         setIsLoggedIn(true);
         // Pass the updated isLoggedIn value to the parent component(App) using props
         props.updateIsLoggedIn(true);
+        // Set select element back to "Home"
+        setSelectedValue("");
       } else {
         alert("Incorrect username or password");
       }
