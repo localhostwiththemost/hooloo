@@ -1,6 +1,10 @@
 .results-section {
   background-color: #1e2126;
   height: 100%;
+
+  @media only screen and (min-width: 2000px) {
+    height: 100vh;
+  }
 }
 
 .results-section__few {

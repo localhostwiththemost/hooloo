@@ -359,6 +359,11 @@ footer {
   height: 100%;
   position: relative;
 }
+@media only screen and (min-width: 2000px) {
+  .genres-section {
+    height: 100vh;
+  }
+}
 
 .genres-section > ion-icon {
   position: absolute;
@@ -690,6 +695,11 @@ a:visited {
 .results-section {
   background-color: #1e2126;
   height: 100%;
+}
+@media only screen and (min-width: 2000px) {
+  .results-section {
+    height: 100vh;
+  }
 }
 
 .results-section__few {
