@@ -692,6 +692,11 @@ a:visited {
   height: 100%;
 }
 
+.results-section__few {
+  background-color: #1e2126;
+  height: 100vh;
+}
+
 .empty {
   background-color: #1e2126;
   height: 100vh;

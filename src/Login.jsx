@@ -43,19 +43,22 @@ function Login(props) {
     const lsUsername = localStorage.getItem("username");
     const lsPassword = localStorage.getItem("password");
 
-    if (username !== "" && password !== "") {
-      if (username === lsUsername && password === lsPassword) {
-        localStorage.setItem("isLoggedIn", true);
-        setIsLoggedIn(true);
-        // Pass the updated isLoggedIn value to the parent component(App) using props
-        props.updateIsLoggedIn(true);
-        // Set select element back to "Home"
-        setSelectedValue("");
-      } else {
-        alert("Incorrect username or password");
-      }
-    } else {
+    if (username === "" || password === "") {
       alert("Username and Password are required fields");
+      return;
+    }
+
+    if (username === lsUsername && password === lsPassword) {
+      localStorage.setItem("isLoggedIn", true);
+      setIsLoggedIn(true);
+      // Pass the updated isLoggedIn value to the parent component(App) using props
+      props.updateIsLoggedIn(true);
+      // Set select element back to "Home"
+      setSelectedValue("");
+    } else {
+      alert("Incorrect username or password");
+      setUsername("");
+      setPassword("");
     }
   };
 
@@ -70,12 +73,14 @@ function Login(props) {
           <input
             type="text"
             name="username"
+            value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit" className="login-btn">
