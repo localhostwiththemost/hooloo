@@ -37,4 +37,4 @@ The current version of this application stores username and password data in loc
 
 ## Live
 
-(https://hooloo.netlify.app/)
+https://hooloo.netlify.app/
