@@ -18,6 +18,11 @@ This application:
 - Has a Genres page that fetches movie data based on the specific genre the user chooses.
 - Has an Account page that allows the user to change the default username and password.
 
+## How To Use
+
+** Default usename **: admin
+** Default password **: admin
+
 ## Technologies Used
 
 - HTML5
