@@ -20,8 +20,8 @@ This application:
 
 ## How To Use
 
-** Default usename **: admin
-** Default password **: admin
+**Default usename**: admin
+**Default password**: admin
 
 ## Technologies Used
 
