@@ -53,6 +53,7 @@ body {
 .login-container {
   background-color: #1e2126;
   height: 100vh;
+  position: relative;
 }
 
 .login-title__container {
@@ -69,7 +70,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 150px;
   padding-bottom: 100px;
 }
 
@@ -118,6 +119,36 @@ body {
 
 .hide {
   display: none;
+}
+
+.post-it {
+  width: 17rem;
+  height: 14rem;
+  position: absolute;
+  background: #ffa;
+  overflow: hidden;
+  top: 50px;
+  right: 45px;
+  border-radius: 0 0 0 30px/45px;
+  box-shadow: inset 0 -40px 40px rgba(0, 0, 0, 0.2), inset 0 25px 10px rgba(0, 0, 0, 0.2), 0 5px 6px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Permanent Marker", cursive;
+  line-height: 1.7em;
+  color: #130d6b;
+  transform: rotate(5deg);
+}
+
+.post-it h1 {
+  white-space: nowrap;
+  font-size: 1.4rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.post-it__ul li {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -488,23 +519,23 @@ nav {
   justify-content: center;
 }
 
-ul {
+.nav-ul {
   list-style: none;
   font-weight: 600;
   padding-left: 40px;
 }
 @media only screen and (max-width: 750px) {
-  ul {
+  .nav-ul {
     display: none;
   }
 }
 
-ul > li {
+.nav-ul > li {
   display: inline;
   margin-right: 40px;
 }
 @media only screen and (max-width: 900px) {
-  ul > li {
+  .nav-ul > li {
     margin-right: 25px;
   }
 }

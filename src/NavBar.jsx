@@ -46,7 +46,7 @@ function NavBar(props) {
               <h1>hooloo</h1>
             </Link>
           </div>
-          <ul>
+          <ul className="nav-ul">
             <li>
               <Link
                 to="/"

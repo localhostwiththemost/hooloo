@@ -65,6 +65,14 @@ function Login(props) {
   return (
     <>
       <div className="login-container">
+        <div className="post-it">
+          <h1>"Super Secure Login"</h1>
+          <ul className="post-it__ul">
+            <li>Username: {localStorage.getItem("username")}</li>
+            <li>Password: {localStorage.getItem("password")}</li>
+          </ul>
+        </div>
+
         <div className="login-title__container">
           <h1 className="login-title">hooloo</h1>
         </div>

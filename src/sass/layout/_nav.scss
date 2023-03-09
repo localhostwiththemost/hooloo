@@ -85,7 +85,7 @@ nav {
   justify-content: center;
 }
 
-ul {
+.nav-ul {
   list-style: none;
   font-weight: 600;
   //font-size: 20px;
@@ -96,7 +96,7 @@ ul {
   }
 }
 
-ul > li {
+.nav-ul > li {
   display: inline;
   margin-right: 40px;
 
