@@ -17,7 +17,7 @@ function Results(props) {
         <section className="results-section">
           <div className="container">
             {props.movies.map((movie) => (
-              <MovieCard movie={movie} />
+              <MovieCard movie={movie} key={movie.imdbID} />
             ))}
           </div>
         </section>

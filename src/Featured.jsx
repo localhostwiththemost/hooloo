@@ -6,12 +6,6 @@ import Loader from "./Loader";
 const API_URL = "https://www.omdbapi.com?apikey=9a98a936";
 
 function Featured() {
-  // const { isLoggedIn } = useContext(AuthContext);
-
-  // if (!isLoggedIn) {
-  //   return <Redirect to="/login" />;
-  // }
-
   const [featured, setFeatured] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -43,7 +37,7 @@ function Featured() {
         ) : featured.length > 0 ? (
           <div className="container">
             {featured.map((movie) => (
-              <MovieCard movie={movie} />
+              <MovieCard movie={movie} key={movie.imdbID} />
             ))}
           </div>
         ) : (

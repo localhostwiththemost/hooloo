@@ -164,7 +164,7 @@ function Genres() {
                 <br></br>
                 <div className="container">
                   {movies.map((movie) => (
-                    <MovieCard movie={movie} />
+                    <MovieCard movie={movie} key={movie.imdbID} />
                   ))}
                 </div>
               </section>

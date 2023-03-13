@@ -69,6 +69,7 @@ function App() {
     setLoading(true);
     let response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
+    console.log(data);
     setLoading(false);
     setMovies(data.Search);
   };
